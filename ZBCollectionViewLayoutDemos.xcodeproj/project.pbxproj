@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D1E8FAB1E1C9EF400665353 /* ZBCollectionViewPyramidLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E8FAA1E1C9EF300665353 /* ZBCollectionViewPyramidLayout.m */; };
 		1D7D59081E024706000F3313 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D59071E024706000F3313 /* main.m */; };
 		1D7D590B1E024706000F3313 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D590A1E024706000F3313 /* AppDelegate.m */; };
 		1D7D590E1E024706000F3313 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D590D1E024706000F3313 /* ViewController.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D1E8FA91E1C9EF300665353 /* ZBCollectionViewPyramidLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBCollectionViewPyramidLayout.h; sourceTree = "<group>"; };
+		1D1E8FAA1E1C9EF300665353 /* ZBCollectionViewPyramidLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBCollectionViewPyramidLayout.m; sourceTree = "<group>"; };
 		1D7D59031E024706000F3313 /* ZBCollectionViewLayoutDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZBCollectionViewLayoutDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D7D59071E024706000F3313 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D7D59091E024706000F3313 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				1D7D593E1E024731000F3313 /* ZBCollectionViewHoverLayout.m */,
 				1D7D593F1E024731000F3313 /* ZBCollectionViewScanPhotosLayout.h */,
 				1D7D59401E024731000F3313 /* ZBCollectionViewScanPhotosLayout.m */,
+				1D1E8FA91E1C9EF300665353 /* ZBCollectionViewPyramidLayout.h */,
+				1D1E8FAA1E1C9EF300665353 /* ZBCollectionViewPyramidLayout.m */,
 			);
 			name = Layout;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D7D59411E024731000F3313 /* ZBCollectionViewCircleLayout.m in Sources */,
+				1D1E8FAB1E1C9EF400665353 /* ZBCollectionViewPyramidLayout.m in Sources */,
 				1D7D590E1E024706000F3313 /* ViewController.m in Sources */,
 				1D7D59421E024731000F3313 /* ZBCollectionViewFlowLayout.m in Sources */,
 				1D7D590B1E024706000F3313 /* AppDelegate.m in Sources */,
@@ -551,6 +557,7 @@
 				1D7D59321E024706000F3313 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D7D59331E024706000F3313 /* Build configuration list for PBXNativeTarget "ZBCollectionViewLayoutDemosTests" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +566,7 @@
 				1D7D59351E024706000F3313 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D7D59361E024706000F3313 /* Build configuration list for PBXNativeTarget "ZBCollectionViewLayoutDemosUITests" */ = {
 			isa = XCConfigurationList;
@@ -567,6 +575,7 @@
 				1D7D59381E024706000F3313 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

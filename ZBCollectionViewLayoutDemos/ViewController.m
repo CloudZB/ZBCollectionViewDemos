@@ -11,6 +11,7 @@
 #import "ZBCollectionViewHoverLayout.h"
 #import "ZBCollectionViewScanPhotosLayout.h"
 #import "ZBCollectionViewCircleLayout.h"
+#import "ZBCollectionViewPyramidLayout.h"
 
 @interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
@@ -36,11 +37,11 @@
     return _items;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad{
     [super viewDidLoad];
     
     //1.自定义布局
-    //瀑布流
+    //1.1 瀑布流
     ZBCollectionViewFlowLayout *flowLayout = [[ZBCollectionViewFlowLayout alloc] init];
     flowLayout.edgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
     flowLayout.columnCount = 3;
@@ -50,23 +51,28 @@
         return [self.items[indexPath.row] floatValue];
     };
     
-    //悬顶效果
+    //1.2 悬顶效果
     ZBCollectionViewHoverLayout *hoverLayout = [[ZBCollectionViewHoverLayout alloc] init];
     hoverLayout.itemSize = CGSizeMake(self.view.frame.size.width, 50);
     hoverLayout.minimumLineSpacing = -1;
     
-    //圆环展示
+    //1.3 圆环展示
     ZBCollectionViewCircleLayout *circleLayout = [[ZBCollectionViewCircleLayout alloc] init];
     circleLayout.itemSize = CGSizeMake(50, 50);
     circleLayout.circleRadius = 80;
     circleLayout.circleCenter = CGPointMake(CGRectGetWidth(self.view.frame) * 0.5, CGRectGetHeight(self.view.frame) * 0.5);
     
-    //line布局 图片浏览
+    //1.4 line布局 图片浏览
     ZBCollectionViewScanPhotosLayout *scanPhotoLayout = [[ZBCollectionViewScanPhotosLayout alloc] init];
     scanPhotoLayout.itemSize = CGSizeMake(300, 500);
     
+    //1.5 pyramid布局 电影售卖 选择
+    ZBCollectionViewPyramidLayout *pyramidLayout = [[ZBCollectionViewPyramidLayout alloc] init];
+    pyramidLayout.itemSize = CGSizeMake(300, 500);
+    pyramidLayout.minimumLineSpacing = -150;
+    
     //2.实例化collectionView
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:scanPhotoLayout];
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:pyramidLayout];
     //2.1设置collectionView的代理
     collectionView.delegate = self;
     collectionView.dataSource = self;
@@ -109,4 +115,5 @@
     //2.删除collectionView单元格 自动重新布局
     [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
 }
+
 @end
