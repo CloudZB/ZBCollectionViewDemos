@@ -1,14 +1,15 @@
+
 //
-//  ZBCollectionViewPyramidLayout.m
-//  ZBCollectionViewLayoutDemos
+//  ZBCollectionViewScanPhotosLayout.m
+//  waterfall
 //
-//  Created by zhangb on 2017/1/4.
-//  Copyright © 2017年 mbp. All rights reserved.
+//  Created by ibabyblue on 16/12/14.
+//  Copyright © 2016年 mbp. All rights reserved.
 //
 
-#import "ZBCollectionViewPyramidLayout.h"
+#import "ZBCollectionViewScanPhotosLayout.h"
 
-@implementation ZBCollectionViewPyramidLayout
+@implementation ZBCollectionViewScanPhotosLayout
 /**
  布局的初始化
  */
@@ -46,20 +47,9 @@
         if (scale > 0.7) {
             //3.2.1 设置透明度
             arrs.alpha = 1;
-            //3.2.2 设置显示层级关系
-            for (int i = 0; i < arrary.count; i++) {
-                UICollectionViewLayoutAttributes *subAttr = [arrary objectAtIndex:i];
-                if (i < [arrary indexOfObject:arrs]) {
-                    subAttr.zIndex = i;
-                }else if (i == [arrary indexOfObject:arrs]){
-                    arrs.zIndex = 1024;
-                }else{
-                    subAttr.zIndex = -[arrary indexOfObject:arrs];
-                }
-            }
         }else
         {
-            arrs.alpha = 0.7;
+            arrs.alpha = 0.5;
         }
         arrs.transform3D = CATransform3DMakeScale(scale, scale, scale);
     }

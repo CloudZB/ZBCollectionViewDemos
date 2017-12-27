@@ -14,8 +14,8 @@
 		1D7D59111E024706000F3313 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D590F1E024706000F3313 /* Main.storyboard */; };
 		1D7D59131E024706000F3313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D59121E024706000F3313 /* Assets.xcassets */; };
 		1D7D59161E024706000F3313 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D59141E024706000F3313 /* LaunchScreen.storyboard */; };
-		1D7D59211E024706000F3313 /* ZBCollectionViewLayoutDemosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D59201E024706000F3313 /* ZBCollectionViewLayoutDemosTests.m */; };
-		1D7D592C1E024706000F3313 /* ZBCollectionViewLayoutDemosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D592B1E024706000F3313 /* ZBCollectionViewLayoutDemosUITests.m */; };
+		1D7D59211E024706000F3313 /* BBBannerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D59201E024706000F3313 /* BBBannerViewTests.m */; };
+		1D7D592C1E024706000F3313 /* BBBannerViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D592B1E024706000F3313 /* BBBannerViewUITests.m */; };
 		1D7D59411E024731000F3313 /* ZBCollectionViewCircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D593A1E024731000F3313 /* ZBCollectionViewCircleLayout.m */; };
 		1D7D59421E024731000F3313 /* ZBCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D593C1E024731000F3313 /* ZBCollectionViewFlowLayout.m */; };
 		1D7D59431E024731000F3313 /* ZBCollectionViewHoverLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D593E1E024731000F3313 /* ZBCollectionViewHoverLayout.m */; };
@@ -28,21 +28,21 @@
 			containerPortal = 1D7D58FB1E024705000F3313 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1D7D59021E024706000F3313;
-			remoteInfo = ZBCollectionViewLayoutDemos;
+			remoteInfo = BBBannerView;
 		};
 		1D7D59281E024706000F3313 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1D7D58FB1E024705000F3313 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1D7D59021E024706000F3313;
-			remoteInfo = ZBCollectionViewLayoutDemos;
+			remoteInfo = BBBannerView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D1E8FA91E1C9EF300665353 /* ZBCollectionViewPyramidLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBCollectionViewPyramidLayout.h; sourceTree = "<group>"; };
 		1D1E8FAA1E1C9EF300665353 /* ZBCollectionViewPyramidLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBCollectionViewPyramidLayout.m; sourceTree = "<group>"; };
-		1D7D59031E024706000F3313 /* ZBCollectionViewLayoutDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZBCollectionViewLayoutDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D7D59031E024706000F3313 /* BBBannerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBBannerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D7D59071E024706000F3313 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D7D59091E024706000F3313 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D7D590A1E024706000F3313 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -52,11 +52,11 @@
 		1D7D59121E024706000F3313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D7D59151E024706000F3313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D7D59171E024706000F3313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1D7D591C1E024706000F3313 /* ZBCollectionViewLayoutDemosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZBCollectionViewLayoutDemosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D7D59201E024706000F3313 /* ZBCollectionViewLayoutDemosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBCollectionViewLayoutDemosTests.m; sourceTree = "<group>"; };
+		1D7D591C1E024706000F3313 /* BBBannerViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBBannerViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D7D59201E024706000F3313 /* BBBannerViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBBannerViewTests.m; sourceTree = "<group>"; };
 		1D7D59221E024706000F3313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1D7D59271E024706000F3313 /* ZBCollectionViewLayoutDemosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZBCollectionViewLayoutDemosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D7D592B1E024706000F3313 /* ZBCollectionViewLayoutDemosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBCollectionViewLayoutDemosUITests.m; sourceTree = "<group>"; };
+		1D7D59271E024706000F3313 /* BBBannerViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBBannerViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D7D592B1E024706000F3313 /* BBBannerViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBBannerViewUITests.m; sourceTree = "<group>"; };
 		1D7D592D1E024706000F3313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D7D59391E024731000F3313 /* ZBCollectionViewCircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBCollectionViewCircleLayout.h; sourceTree = "<group>"; };
 		1D7D593A1E024731000F3313 /* ZBCollectionViewCircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBCollectionViewCircleLayout.m; sourceTree = "<group>"; };
@@ -97,9 +97,9 @@
 		1D7D58FA1E024705000F3313 = {
 			isa = PBXGroup;
 			children = (
-				1D7D59051E024706000F3313 /* ZBCollectionViewLayoutDemos */,
-				1D7D591F1E024706000F3313 /* ZBCollectionViewLayoutDemosTests */,
-				1D7D592A1E024706000F3313 /* ZBCollectionViewLayoutDemosUITests */,
+				1D7D59051E024706000F3313 /* BBBannerView */,
+				1D7D591F1E024706000F3313 /* BBBannerViewTests */,
+				1D7D592A1E024706000F3313 /* BBBannerViewUITests */,
 				1D7D59041E024706000F3313 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,21 +107,21 @@
 		1D7D59041E024706000F3313 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D7D59031E024706000F3313 /* ZBCollectionViewLayoutDemos.app */,
-				1D7D591C1E024706000F3313 /* ZBCollectionViewLayoutDemosTests.xctest */,
-				1D7D59271E024706000F3313 /* ZBCollectionViewLayoutDemosUITests.xctest */,
+				1D7D59031E024706000F3313 /* BBBannerView.app */,
+				1D7D591C1E024706000F3313 /* BBBannerViewTests.xctest */,
+				1D7D59271E024706000F3313 /* BBBannerViewUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1D7D59051E024706000F3313 /* ZBCollectionViewLayoutDemos */ = {
+		1D7D59051E024706000F3313 /* BBBannerView */ = {
 			isa = PBXGroup;
 			children = (
 				1D7D59461E024770000F3313 /* Other */,
 				1D7D59451E02473F000F3313 /* Layout */,
 				1D7D59061E024706000F3313 /* Supporting Files */,
 			);
-			path = ZBCollectionViewLayoutDemos;
+			path = BBBannerView;
 			sourceTree = "<group>";
 		};
 		1D7D59061E024706000F3313 /* Supporting Files */ = {
@@ -137,22 +137,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1D7D591F1E024706000F3313 /* ZBCollectionViewLayoutDemosTests */ = {
+		1D7D591F1E024706000F3313 /* BBBannerViewTests */ = {
 			isa = PBXGroup;
 			children = (
-				1D7D59201E024706000F3313 /* ZBCollectionViewLayoutDemosTests.m */,
+				1D7D59201E024706000F3313 /* BBBannerViewTests.m */,
 				1D7D59221E024706000F3313 /* Info.plist */,
 			);
-			path = ZBCollectionViewLayoutDemosTests;
+			path = BBBannerViewTests;
 			sourceTree = "<group>";
 		};
-		1D7D592A1E024706000F3313 /* ZBCollectionViewLayoutDemosUITests */ = {
+		1D7D592A1E024706000F3313 /* BBBannerViewUITests */ = {
 			isa = PBXGroup;
 			children = (
-				1D7D592B1E024706000F3313 /* ZBCollectionViewLayoutDemosUITests.m */,
+				1D7D592B1E024706000F3313 /* BBBannerViewUITests.m */,
 				1D7D592D1E024706000F3313 /* Info.plist */,
 			);
-			path = ZBCollectionViewLayoutDemosUITests;
+			path = BBBannerViewUITests;
 			sourceTree = "<group>";
 		};
 		1D7D59451E02473F000F3313 /* Layout */ = {
@@ -186,9 +186,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D7D59021E024706000F3313 /* ZBCollectionViewLayoutDemos */ = {
+		1D7D59021E024706000F3313 /* BBBannerView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D7D59301E024706000F3313 /* Build configuration list for PBXNativeTarget "ZBCollectionViewLayoutDemos" */;
+			buildConfigurationList = 1D7D59301E024706000F3313 /* Build configuration list for PBXNativeTarget "BBBannerView" */;
 			buildPhases = (
 				1D7D58FF1E024706000F3313 /* Sources */,
 				1D7D59001E024706000F3313 /* Frameworks */,
@@ -198,14 +198,14 @@
 			);
 			dependencies = (
 			);
-			name = ZBCollectionViewLayoutDemos;
-			productName = ZBCollectionViewLayoutDemos;
-			productReference = 1D7D59031E024706000F3313 /* ZBCollectionViewLayoutDemos.app */;
+			name = BBBannerView;
+			productName = BBBannerView;
+			productReference = 1D7D59031E024706000F3313 /* BBBannerView.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1D7D591B1E024706000F3313 /* ZBCollectionViewLayoutDemosTests */ = {
+		1D7D591B1E024706000F3313 /* BBBannerViewTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D7D59331E024706000F3313 /* Build configuration list for PBXNativeTarget "ZBCollectionViewLayoutDemosTests" */;
+			buildConfigurationList = 1D7D59331E024706000F3313 /* Build configuration list for PBXNativeTarget "BBBannerViewTests" */;
 			buildPhases = (
 				1D7D59181E024706000F3313 /* Sources */,
 				1D7D59191E024706000F3313 /* Frameworks */,
@@ -216,14 +216,14 @@
 			dependencies = (
 				1D7D591E1E024706000F3313 /* PBXTargetDependency */,
 			);
-			name = ZBCollectionViewLayoutDemosTests;
-			productName = ZBCollectionViewLayoutDemosTests;
-			productReference = 1D7D591C1E024706000F3313 /* ZBCollectionViewLayoutDemosTests.xctest */;
+			name = BBBannerViewTests;
+			productName = BBBannerViewTests;
+			productReference = 1D7D591C1E024706000F3313 /* BBBannerViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1D7D59261E024706000F3313 /* ZBCollectionViewLayoutDemosUITests */ = {
+		1D7D59261E024706000F3313 /* BBBannerViewUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D7D59361E024706000F3313 /* Build configuration list for PBXNativeTarget "ZBCollectionViewLayoutDemosUITests" */;
+			buildConfigurationList = 1D7D59361E024706000F3313 /* Build configuration list for PBXNativeTarget "BBBannerViewUITests" */;
 			buildPhases = (
 				1D7D59231E024706000F3313 /* Sources */,
 				1D7D59241E024706000F3313 /* Frameworks */,
@@ -234,9 +234,9 @@
 			dependencies = (
 				1D7D59291E024706000F3313 /* PBXTargetDependency */,
 			);
-			name = ZBCollectionViewLayoutDemosUITests;
-			productName = ZBCollectionViewLayoutDemosUITests;
-			productReference = 1D7D59271E024706000F3313 /* ZBCollectionViewLayoutDemosUITests.xctest */;
+			name = BBBannerViewUITests;
+			productName = BBBannerViewUITests;
+			productReference = 1D7D59271E024706000F3313 /* BBBannerViewUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -264,7 +264,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1D7D58FE1E024705000F3313 /* Build configuration list for PBXProject "ZBCollectionViewLayoutDemos" */;
+			buildConfigurationList = 1D7D58FE1E024705000F3313 /* Build configuration list for PBXProject "BBBannerView" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -277,9 +277,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D7D59021E024706000F3313 /* ZBCollectionViewLayoutDemos */,
-				1D7D591B1E024706000F3313 /* ZBCollectionViewLayoutDemosTests */,
-				1D7D59261E024706000F3313 /* ZBCollectionViewLayoutDemosUITests */,
+				1D7D59021E024706000F3313 /* BBBannerView */,
+				1D7D591B1E024706000F3313 /* BBBannerViewTests */,
+				1D7D59261E024706000F3313 /* BBBannerViewUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -331,7 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D7D59211E024706000F3313 /* ZBCollectionViewLayoutDemosTests.m in Sources */,
+				1D7D59211E024706000F3313 /* BBBannerViewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D7D592C1E024706000F3313 /* ZBCollectionViewLayoutDemosUITests.m in Sources */,
+				1D7D592C1E024706000F3313 /* BBBannerViewUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,12 +348,12 @@
 /* Begin PBXTargetDependency section */
 		1D7D591E1E024706000F3313 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1D7D59021E024706000F3313 /* ZBCollectionViewLayoutDemos */;
+			target = 1D7D59021E024706000F3313 /* BBBannerView */;
 			targetProxy = 1D7D591D1E024706000F3313 /* PBXContainerItemProxy */;
 		};
 		1D7D59291E024706000F3313 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1D7D59021E024706000F3313 /* ZBCollectionViewLayoutDemos */;
+			target = 1D7D59021E024706000F3313 /* BBBannerView */;
 			targetProxy = 1D7D59281E024706000F3313 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -471,10 +471,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/ZBCollectionViewLayoutDemos/PrefixHeader.pch";
-				INFOPLIST_FILE = ZBCollectionViewLayoutDemos/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BBBannerView/PrefixHeader.pch";
+				INFOPLIST_FILE = BBBannerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.neunn.ZBCollectionViewLayoutDemos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neunn.BBBannerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -484,10 +484,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/ZBCollectionViewLayoutDemos/PrefixHeader.pch";
-				INFOPLIST_FILE = ZBCollectionViewLayoutDemos/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BBBannerView/PrefixHeader.pch";
+				INFOPLIST_FILE = BBBannerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.neunn.ZBCollectionViewLayoutDemos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neunn.BBBannerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -496,11 +496,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ZBCollectionViewLayoutDemosTests/Info.plist;
+				INFOPLIST_FILE = BBBannerViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.neunn.ZBCollectionViewLayoutDemosTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neunn.BBBannerViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZBCollectionViewLayoutDemos.app/ZBCollectionViewLayoutDemos";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBBannerView.app/BBBannerView";
 			};
 			name = Debug;
 		};
@@ -508,40 +508,40 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ZBCollectionViewLayoutDemosTests/Info.plist;
+				INFOPLIST_FILE = BBBannerViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.neunn.ZBCollectionViewLayoutDemosTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neunn.BBBannerViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZBCollectionViewLayoutDemos.app/ZBCollectionViewLayoutDemos";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBBannerView.app/BBBannerView";
 			};
 			name = Release;
 		};
 		1D7D59371E024706000F3313 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = ZBCollectionViewLayoutDemosUITests/Info.plist;
+				INFOPLIST_FILE = BBBannerViewUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.neunn.ZBCollectionViewLayoutDemosUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neunn.BBBannerViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ZBCollectionViewLayoutDemos;
+				TEST_TARGET_NAME = BBBannerView;
 			};
 			name = Debug;
 		};
 		1D7D59381E024706000F3313 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = ZBCollectionViewLayoutDemosUITests/Info.plist;
+				INFOPLIST_FILE = BBBannerViewUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.neunn.ZBCollectionViewLayoutDemosUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neunn.BBBannerViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ZBCollectionViewLayoutDemos;
+				TEST_TARGET_NAME = BBBannerView;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D7D58FE1E024705000F3313 /* Build configuration list for PBXProject "ZBCollectionViewLayoutDemos" */ = {
+		1D7D58FE1E024705000F3313 /* Build configuration list for PBXProject "BBBannerView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D7D592E1E024706000F3313 /* Debug */,
@@ -550,7 +550,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1D7D59301E024706000F3313 /* Build configuration list for PBXNativeTarget "ZBCollectionViewLayoutDemos" */ = {
+		1D7D59301E024706000F3313 /* Build configuration list for PBXNativeTarget "BBBannerView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D7D59311E024706000F3313 /* Debug */,
@@ -559,7 +559,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1D7D59331E024706000F3313 /* Build configuration list for PBXNativeTarget "ZBCollectionViewLayoutDemosTests" */ = {
+		1D7D59331E024706000F3313 /* Build configuration list for PBXNativeTarget "BBBannerViewTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D7D59341E024706000F3313 /* Debug */,
@@ -568,7 +568,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1D7D59361E024706000F3313 /* Build configuration list for PBXNativeTarget "ZBCollectionViewLayoutDemosUITests" */ = {
+		1D7D59361E024706000F3313 /* Build configuration list for PBXNativeTarget "BBBannerViewUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D7D59371E024706000F3313 /* Debug */,

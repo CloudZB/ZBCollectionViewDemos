@@ -1,8 +1,8 @@
 //
 //  ViewController.h
-//  ZBCollectionViewLayoutDemos
+//  BBBannerView
 //
-//  Created by zhangb on 16/12/15.
+//  Created by ibabyblue on 16/12/15.
 //  Copyright © 2016年 mbp. All rights reserved.
 //
 

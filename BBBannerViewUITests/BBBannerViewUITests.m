@@ -1,6 +1,6 @@
 //
-//  ZBCollectionViewLayoutDemosUITests.m
-//  ZBCollectionViewLayoutDemosUITests
+//  BBBannerViewUITests.m
+//  BBBannerViewUITests
 //
 //  Created by zhangb on 16/12/15.
 //  Copyright © 2016年 mbp. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface ZBCollectionViewLayoutDemosUITests : XCTestCase
+@interface BBBannerViewUITests : XCTestCase
 
 @end
 
-@implementation ZBCollectionViewLayoutDemosUITests
+@implementation BBBannerViewUITests
 
 - (void)setUp {
     [super setUp];

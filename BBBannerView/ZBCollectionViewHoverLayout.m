@@ -3,7 +3,7 @@
 //  ZBCollectionViewHoverLayout.m
 //  waterfall
 //
-//  Created by zhangb on 16/12/13.
+//  Created by ibabyblue on 16/12/13.
 //  Copyright © 2016年 mbp. All rights reserved.
 //
 

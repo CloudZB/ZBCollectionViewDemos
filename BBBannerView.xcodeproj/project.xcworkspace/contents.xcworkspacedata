@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ZBCollectionViewLayoutDemos.xcodeproj">
+      location = "self:/Users/ibabyblue/Documents/PrivateBlock/BBBannerView/BBBannerView.xcodeproj">
    </FileRef>
 </Workspace>
