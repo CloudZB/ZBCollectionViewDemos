@@ -13,6 +13,8 @@
 #import "ZBCollectionViewCircleLayout.h"
 #import "ZBCollectionViewPyramidLayout.h"
 
+#import "BBBannerView.h"
+
 @interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
 /**
@@ -40,49 +42,72 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    //1.自定义布局
-    //1.1 瀑布流
-    ZBCollectionViewFlowLayout *flowLayout = [[ZBCollectionViewFlowLayout alloc] init];
-    flowLayout.edgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
-    flowLayout.columnCount = 3;
-    flowLayout.columnMargin = 5;
-    flowLayout.rowMargin = 5;
-    flowLayout.itemHeightBlock = ^CGFloat(NSIndexPath *indexPath){
-        return [self.items[indexPath.row] floatValue];
-    };
+//    //1.自定义布局
+//    //1.1 瀑布流
+//    ZBCollectionViewFlowLayout *flowLayout = [[ZBCollectionViewFlowLayout alloc] init];
+//    flowLayout.edgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+//    flowLayout.columnCount = 3;
+//    flowLayout.columnMargin = 5;
+//    flowLayout.rowMargin = 5;
+//    flowLayout.itemHeightBlock = ^CGFloat(NSIndexPath *indexPath){
+//        return [self.items[indexPath.row] floatValue];
+//    };
+//
+//    //1.2 悬顶效果
+//    ZBCollectionViewHoverLayout *hoverLayout = [[ZBCollectionViewHoverLayout alloc] init];
+//    hoverLayout.itemSize = CGSizeMake(self.view.frame.size.width, 50);
+//    hoverLayout.minimumLineSpacing = -1;
+//
+//    //1.3 圆环展示
+//    ZBCollectionViewCircleLayout *circleLayout = [[ZBCollectionViewCircleLayout alloc] init];
+//    circleLayout.itemSize = CGSizeMake(50, 50);
+//    circleLayout.circleRadius = 80;
+//    circleLayout.circleCenter = CGPointMake(CGRectGetWidth(self.view.frame) * 0.5, CGRectGetHeight(self.view.frame) * 0.5);
+//
+//    //1.4 line布局 图片浏览
+//    ZBCollectionViewScanPhotosLayout *scanPhotoLayout = [[ZBCollectionViewScanPhotosLayout alloc] init];
+//    scanPhotoLayout.itemSize = CGSizeMake(300, 500);
+//
+//    //1.5 pyramid布局 电影售卖 选择
+//    ZBCollectionViewPyramidLayout *pyramidLayout = [[ZBCollectionViewPyramidLayout alloc] init];
+//    pyramidLayout.itemSize = CGSizeMake(300, 500);
+//    pyramidLayout.minimumLineSpacing = -150;
+//
+//    //2.实例化collectionView
+//    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:scanPhotoLayout];
+//    //2.1设置collectionView的代理
+//    collectionView.delegate = self;
+//    collectionView.dataSource = self;
+//    //2.2赋值给全局变量
+//    self.collectionView = collectionView;
+//    //2.3添加到当前控制器view上
+//    [self.view addSubview:collectionView];
+//
+//    //3.collectionView 注册cell
+//    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:ZB_WaterFallCell_identifier];
     
-    //1.2 悬顶效果
-    ZBCollectionViewHoverLayout *hoverLayout = [[ZBCollectionViewHoverLayout alloc] init];
-    hoverLayout.itemSize = CGSizeMake(self.view.frame.size.width, 50);
-    hoverLayout.minimumLineSpacing = -1;
     
-    //1.3 圆环展示
-    ZBCollectionViewCircleLayout *circleLayout = [[ZBCollectionViewCircleLayout alloc] init];
-    circleLayout.itemSize = CGSizeMake(50, 50);
-    circleLayout.circleRadius = 80;
-    circleLayout.circleCenter = CGPointMake(CGRectGetWidth(self.view.frame) * 0.5, CGRectGetHeight(self.view.frame) * 0.5);
+    //模拟数据源
+    NSArray *imagesArray = @[[UIImage imageNamed:@"kobe1.jpg"],
+                             [UIImage imageNamed:@"kobe2.jpg"],
+                             [UIImage imageNamed:@"kobe3.jpg"],
+                             [UIImage imageNamed:@"kobe4.jpg"],
+                             [UIImage imageNamed:@"kobe5.jpg"],
+                             [UIImage imageNamed:@"kobe6.jpg"]
+                             ];
     
-    //1.4 line布局 图片浏览
-    ZBCollectionViewScanPhotosLayout *scanPhotoLayout = [[ZBCollectionViewScanPhotosLayout alloc] init];
-    scanPhotoLayout.itemSize = CGSizeMake(300, 500);
+    //创建轮播器控件
+    BBBannerView *bannerView = [[BBBannerView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 180) images:imagesArray clickFeedBack:^(NSUInteger index) {
+        NSLog(@"index:%lu",(unsigned long)index);
+    }];
     
-    //1.5 pyramid布局 电影售卖 选择
-    ZBCollectionViewPyramidLayout *pyramidLayout = [[ZBCollectionViewPyramidLayout alloc] init];
-    pyramidLayout.itemSize = CGSizeMake(300, 500);
-    pyramidLayout.minimumLineSpacing = -150;
+    bannerView.pageControlPosition = BBBannerViewPageControlPositionBottomRight;
+    bannerView.pageTintColor = [UIColor cyanColor];
+    bannerView.currentPageTintColor = [UIColor purpleColor];
+    bannerView.offsetRight = 60;
     
-    //2.实例化collectionView
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:scanPhotoLayout];
-    //2.1设置collectionView的代理
-    collectionView.delegate = self;
-    collectionView.dataSource = self;
-    //2.2赋值给全局变量
-    self.collectionView = collectionView;
-    //2.3添加到当前控制器view上
-    [self.view addSubview:collectionView];
     
-    //3.collectionView 注册cell
-    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:ZB_WaterFallCell_identifier];
+    [self.view addSubview:bannerView];
     
 }
 
@@ -94,11 +119,11 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     //1.实例化collectionView cell
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ZB_WaterFallCell_identifier forIndexPath:indexPath];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:BB_WaterFallCell_identifier forIndexPath:indexPath];
     
     //2.cell设置随机色
     if (cell) {
-        cell.backgroundColor = ZB_RandomColor;
+        cell.backgroundColor = BB_RandomColor;
     }
     
     //3.cell设置圆角

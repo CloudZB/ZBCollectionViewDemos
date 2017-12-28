@@ -1,16 +1,16 @@
 //
 //  PrefixHeader.pch
-//  ZBCollectionViewLayoutDemos
+//  BBBannerView
 //
-//  Created by zhangb on 16/12/15.
+//  Created by ibabyblue on 16/12/15.
 //  Copyright © 2016年 mbp. All rights reserved.
 //
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#define ZB_WaterFallCell_identifier @"waterfallCell"
-#define ZB_WaterFallCellColor(R,G,B) [UIColor colorWithRed:(R)/ 255.f green:(G)/255.f blue:(B)/255.f alpha:1]
-#define ZB_RandomColor ZB_WaterFallCellColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+#define BB_WaterFallCell_identifier @"waterfallCell"
+#define BB_WaterFallCellColor(R,G,B) [UIColor colorWithRed:(R)/ 255.f green:(G)/255.f blue:(B)/255.f alpha:1]
+#define BB_RandomColor BB_WaterFallCellColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
 #endif /* PrefixHeader_pch */

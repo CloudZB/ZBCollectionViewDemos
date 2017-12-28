@@ -20,6 +20,7 @@
 		1D7D59421E024731000F3313 /* ZBCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D593C1E024731000F3313 /* ZBCollectionViewFlowLayout.m */; };
 		1D7D59431E024731000F3313 /* ZBCollectionViewHoverLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D593E1E024731000F3313 /* ZBCollectionViewHoverLayout.m */; };
 		1D7D59441E024731000F3313 /* ZBCollectionViewScanPhotosLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D59401E024731000F3313 /* ZBCollectionViewScanPhotosLayout.m */; };
+		4DF956861FF3C908006FC7D8 /* BBBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF956851FF3C908006FC7D8 /* BBBannerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		1D7D593F1E024731000F3313 /* ZBCollectionViewScanPhotosLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBCollectionViewScanPhotosLayout.h; sourceTree = "<group>"; };
 		1D7D59401E024731000F3313 /* ZBCollectionViewScanPhotosLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBCollectionViewScanPhotosLayout.m; sourceTree = "<group>"; };
 		1D7D59471E02479C000F3313 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		4DF956841FF3C908006FC7D8 /* BBBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBBannerView.h; sourceTree = "<group>"; };
+		4DF956851FF3C908006FC7D8 /* BBBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBBannerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +182,8 @@
 				1D7D590A1E024706000F3313 /* AppDelegate.m */,
 				1D7D590C1E024706000F3313 /* ViewController.h */,
 				1D7D590D1E024706000F3313 /* ViewController.m */,
+				4DF956841FF3C908006FC7D8 /* BBBannerView.h */,
+				4DF956851FF3C908006FC7D8 /* BBBannerView.m */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -320,6 +325,7 @@
 				1D1E8FAB1E1C9EF400665353 /* ZBCollectionViewPyramidLayout.m in Sources */,
 				1D7D590E1E024706000F3313 /* ViewController.m in Sources */,
 				1D7D59421E024731000F3313 /* ZBCollectionViewFlowLayout.m in Sources */,
+				4DF956861FF3C908006FC7D8 /* BBBannerView.m in Sources */,
 				1D7D590B1E024706000F3313 /* AppDelegate.m in Sources */,
 				1D7D59081E024706000F3313 /* main.m in Sources */,
 				1D7D59441E024731000F3313 /* ZBCollectionViewScanPhotosLayout.m in Sources */,
