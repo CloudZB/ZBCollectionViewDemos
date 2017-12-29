@@ -16,25 +16,29 @@ typedef NS_ENUM(NSUInteger, BBBannerViewPageControlPosition) {
 @interface BBBannerView : UIView
 
 /**页码的位置,默认在中下*/
-@property (nonatomic, assign) BBBannerViewPageControlPosition pageControlPosition;
+@property (nonatomic, assign) BBBannerViewPageControlPosition   pageControlPosition;
 
 /**是否需要设置页码，默认显示(多张图片显示，单张图片不显示)*/
-@property (nonatomic, assign) BOOL isNeedPageControl;
+@property (nonatomic, assign) BOOL                              isNeedPageControl;
 
 /**设置当前页码的颜色，默认黄色*/
-@property (nonatomic, strong, nullable) UIColor *currentPageTintColor;
+@property (nonatomic, strong, nullable) UIColor                 *currentPageTintColor;
 
 /**设置页码的颜色，默认白色*/
-@property (nonatomic, strong, nullable) UIColor *pageTintColor;
+@property (nonatomic, strong, nullable) UIColor                 *pageTintColor;
 
 /**设置UIPageControl右侧偏移量*/
-@property (nonatomic, assign) CGFloat offsetRight;
+@property (nonatomic, assign) CGFloat                           offsetRight;
 
 /**设置UIPageControl底侧偏移量*/
-@property (nonatomic, assign) CGFloat offsetBottom;
+@property (nonatomic, assign) CGFloat                           offsetBottom;
 
-/**设置是否需要自动轮播*/
-@property (nonatomic, assign) BOOL isNeedAutoCarousel;
+/**设置是否需要自动轮播,默认为YES*/
+@property (nonatomic, assign) BOOL                              isNeedAutoCarousel;
+
+/**设置轮播时间间隔,默认为2s*/
+@property (nonatomic, assign) CGFloat                           intervalTime;
+
 
 /**
  轮播器初始化动态方法

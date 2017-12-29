@@ -15,12 +15,14 @@
 typedef void(^clickFeedBack)(NSUInteger index);
 
 @interface BBBannerView ()<UIScrollViewDelegate>
-@property (nonatomic, strong) UIScrollView      *scrollView;
-@property (nonatomic, strong) UIPageControl     *pageControl;
-@property (nonatomic, strong) NSMutableArray    *imageViews;
-@property (nonatomic, strong) NSArray           *images;
-@property (nonatomic, assign) NSUInteger        currentIndex;
-@property (nonatomic, copy) clickFeedBack       clickFeedBack;
+@property (nonatomic, strong, nonnull) UIScrollView      *scrollView;
+@property (nonatomic, strong, nonnull) UIPageControl     *pageControl;
+@property (nonatomic, strong, nonnull) NSMutableArray    *imageViews;
+@property (nonatomic, strong, nonnull) NSArray           *images;
+@property (nonatomic, strong, nonnull) NSTimer           *timer;
+@property (nonatomic, copy, nullable) clickFeedBack      clickFeedBack;
+@property (nonatomic, assign) NSUInteger                 currentIndex;
+@property (nonatomic, assign) BOOL                       isDefault;
 @end
 
 @implementation BBBannerView
@@ -95,19 +97,36 @@ typedef void(^clickFeedBack)(NSUInteger index);
     _offsetBottom = offsetBottom;
     [self updateConstraints];
 }
+
+- (void)setIsNeedAutoCarousel:(BOOL)isNeedAutoCarousel{
+    _isNeedAutoCarousel = isNeedAutoCarousel;
+    isNeedAutoCarousel ? isNeedAutoCarousel : [self inValidateTimer];
+    self.isDefault = NO;
+}
+
+- (void)setIntervalTime:(CGFloat)intervalTime{
+    _intervalTime = intervalTime;
+    [self validateTimer];
+}
+
 #pragma mark - 初始化方法
 - (instancetype)initWithFrame:(CGRect)frame images:(NSArray *)images clickFeedBack:(void (^)(NSUInteger))clickFeedBack{
     
     if (self = [super initWithFrame:frame]) {
         //1.保存数据
-        self.images = images;
-        self.clickFeedBack = clickFeedBack;
+        _images = images;
+        _clickFeedBack = clickFeedBack;
         //2.初始化界面
         [self setupUI];
         
         //3.更新约束
         [self setNeedsUpdateConstraints];
         
+        //4.初始化定时器
+        [self validateTimer];
+        
+        //5.设置是否为默认轮播
+        self.isDefault = YES;
     }
     return self;
     
@@ -171,6 +190,26 @@ typedef void(^clickFeedBack)(NSUInteger index);
     
 }
 
+#pragma mark - 定时器
+- (void)inValidateTimer {
+    
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
+}
+
+- (void)validateTimer
+{
+    [_timer isValid] ? [self inValidateTimer] : nil;
+    self.timer = [NSTimer timerWithTimeInterval:self.intervalTime ? self.intervalTime : 2.0f target:self selector:@selector(carouselAction) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+}
+
+- (void)carouselAction{
+    [self.scrollView setContentOffset:CGPointMake(kWidth * 2, 0) animated:YES];
+}
+
 #pragma mark - 点击手势事件
 - (void)tapAction:(UIGestureRecognizer *)gesture{
     if ([gesture isKindOfClass:[UITapGestureRecognizer class]]) {
@@ -201,11 +240,11 @@ typedef void(^clickFeedBack)(NSUInteger index);
     
 }
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    
+    [self inValidateTimer];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    
+    self.isDefault | self.isNeedAutoCarousel ? [self validateTimer] : nil;
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{

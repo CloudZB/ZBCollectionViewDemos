@@ -87,16 +87,14 @@
 //    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:ZB_WaterFallCell_identifier];
     
     
-    //模拟数据源
-    NSArray *imagesArray = @[[UIImage imageNamed:@"kobe1.jpg"],
-                             [UIImage imageNamed:@"kobe2.jpg"],
-                             [UIImage imageNamed:@"kobe3.jpg"],
-                             [UIImage imageNamed:@"kobe4.jpg"],
-                             [UIImage imageNamed:@"kobe5.jpg"],
-                             [UIImage imageNamed:@"kobe6.jpg"]
-                             ];
+    //图片数组
+    NSArray *imagesArray = @[[UIImage imageNamed:@"timg1.jpeg"],
+                             [UIImage imageNamed:@"timg2.jpeg"],
+                             [UIImage imageNamed:@"timg3.jpeg"],
+                             [UIImage imageNamed:@"timg4.jpeg"],
+                             [UIImage imageNamed:@"timg5.jpeg"],];
     
-    //创建轮播器控件
+    //初始化控件
     BBBannerView *bannerView = [[BBBannerView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 180) images:imagesArray clickFeedBack:^(NSUInteger index) {
         NSLog(@"index:%lu",(unsigned long)index);
     }];
@@ -105,7 +103,8 @@
     bannerView.pageTintColor = [UIColor cyanColor];
     bannerView.currentPageTintColor = [UIColor purpleColor];
     bannerView.offsetRight = 60;
-    
+//    bannerView.intervalTime = 3;
+    bannerView.isNeedAutoCarousel = YES;
     
     [self.view addSubview:bannerView];
     
