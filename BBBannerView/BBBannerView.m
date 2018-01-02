@@ -22,7 +22,10 @@ typedef void(^clickFeedBack)(NSUInteger index);
 @property (nonatomic, strong, nonnull) NSTimer           *timer;
 @property (nonatomic, copy, nullable) clickFeedBack      clickFeedBack;
 @property (nonatomic, assign) NSUInteger                 currentIndex;
-@property (nonatomic, assign) BOOL                       isDefault;
+@property (nonatomic, assign) BOOL                       isDefaultAutoCarousel;
+@property (nonatomic, assign) BOOL                       isDefaultUnlimitedLeft;
+@property (nonatomic, assign) BOOL                       isDefaultUnlimitedRight;
+@property (nonatomic, assign) BOOL                       isFirstPage;
 @end
 
 @implementation BBBannerView
@@ -59,10 +62,12 @@ typedef void(^clickFeedBack)(NSUInteger index);
 
 #pragma mark - setter方法
 - (void)setIsNeedPageControl:(BOOL)isNeedPageControl{
+    
     _isNeedPageControl = isNeedPageControl;
     if (![self.pageControl isHidden]) {
         [self.pageControl setHidden:YES];
     }
+    
 }
 
 - (void)setPageControlPosition:(BBBannerViewPageControlPosition)pageControlPosition{
@@ -89,24 +94,32 @@ typedef void(^clickFeedBack)(NSUInteger index);
 }
 
 - (void)setOffsetRight:(CGFloat)offsetRight{
+    
     _offsetRight = offsetRight;
     [self updateConstraints];
+    
 }
 
 - (void)setOffsetBottom:(CGFloat)offsetBottom{
+    
     _offsetBottom = offsetBottom;
     [self updateConstraints];
+    
 }
 
 - (void)setIsNeedAutoCarousel:(BOOL)isNeedAutoCarousel{
+    
     _isNeedAutoCarousel = isNeedAutoCarousel;
     isNeedAutoCarousel ? isNeedAutoCarousel : [self inValidateTimer];
-    self.isDefault = NO;
+    self.isDefaultAutoCarousel = NO;
+    
 }
 
 - (void)setIntervalTime:(CGFloat)intervalTime{
+    
     _intervalTime = intervalTime;
     [self validateTimer];
+    
 }
 
 #pragma mark - 初始化方法
@@ -125,8 +138,12 @@ typedef void(^clickFeedBack)(NSUInteger index);
         //4.初始化定时器
         [self validateTimer];
         
-        //5.设置是否为默认轮播
-        self.isDefault = YES;
+        //5.设置默认值
+        self.isFirstPage = YES;
+        self.isDefaultAutoCarousel = YES;
+        self.isDefaultUnlimitedLeft = NO;
+        self.isDefaultUnlimitedRight = NO;
+        self.isAllowUnlimitedCarousel = YES;
     }
     return self;
     
@@ -147,6 +164,7 @@ typedef void(^clickFeedBack)(NSUInteger index);
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.pagingEnabled = YES;
     self.scrollView.bounces = NO;
+    self.scrollView.delaysContentTouches = NO;
     self.scrollView.contentSize = CGSizeMake(kWidth * 3, kHeight);
     self.scrollView.contentOffset = CGPointMake(kWidth, 0);
     self.scrollView.delegate = self;
@@ -220,6 +238,39 @@ typedef void(^clickFeedBack)(NSUInteger index);
 #pragma mark - UIScrollView代理方法
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
+    if (!self.isNeedAutoCarousel) {
+        if (!self.isAllowUnlimitedCarousel) {
+            if ((self.scrollView.contentOffset.x < kWidth) && (self.currentIndex == 0)){
+                if (self.isDefaultUnlimitedLeft) {
+                    self.scrollView.contentOffset = CGPointMake(kWidth, 0);
+                    return;
+                }else if (self.isFirstPage){
+                    self.scrollView.contentOffset = CGPointMake(kWidth, 0);
+                    return;
+                }else{
+                    
+                }
+            }else if (((self.scrollView.contentOffset.x > kWidth) && self.currentIndex == self.images.count - 1)){
+                if (self.isDefaultUnlimitedRight) {
+                    self.scrollView.contentOffset = CGPointMake(kWidth, 0);
+                    return;
+                }
+            }else if ((self.scrollView.contentOffset.x > kWidth) && (self.currentIndex == 0)){
+                if (self.scrollView.isDecelerating && (self.scrollView.contentOffset.x < kWidth * 1.04)) {
+                    self.scrollView.contentOffset = CGPointMake(kWidth, 0);
+                    return;
+                }else if (self.scrollView.isDecelerating && (self.scrollView.contentOffset.x < kWidth * 1.12)){
+                    [UIView animateWithDuration:0.1f animations:^{
+                        self.scrollView.contentOffset = CGPointMake(kWidth, 0);
+                    }];
+                    return;
+                }
+            }else{
+                
+            }
+        }
+    }
+    
     //1.计算pageControl是否切换currentPage
     if (self.scrollView.contentOffset.x < kWidth * 0.5) {
         if ([_imageViews[1] tag] == 0) {
@@ -236,6 +287,7 @@ typedef void(^clickFeedBack)(NSUInteger index);
     }else{
         self.pageControl.currentPage = [_imageViews[1] tag];
     }
+    
     self.currentIndex = self.pageControl.currentPage;
     
 }
@@ -244,21 +296,43 @@ typedef void(^clickFeedBack)(NSUInteger index);
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    self.isDefault | self.isNeedAutoCarousel ? [self validateTimer] : nil;
+    self.isDefaultAutoCarousel | self.isNeedAutoCarousel ? [self validateTimer] : nil;
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    [self layoutImageViewsAndPageControl];
+    
+    if (!self.isNeedAutoCarousel) {
+        if (!self.isAllowUnlimitedCarousel) {
+            if (self.currentIndex == 0){
+                return;
+            }else if ((self.currentIndex == self.images.count - 1)){
+                return;
+            }else{
+                
+            }
+        }
+    }
+    
+    [self layoutImageViews];
+    
+    if (!self.isNeedAutoCarousel) {
+        if (!self.isAllowUnlimitedCarousel) {
+            if (self.currentIndex == self.images.count - 1) self.isDefaultUnlimitedRight = YES;
+            if (self.currentIndex == 0) self.isDefaultUnlimitedLeft = YES;
+            self.isFirstPage = NO;
+        }
+    }
+    
 }
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
-    [self layoutImageViewsAndPageControl];
+    [self layoutImageViews];
 }
 
 /**
- 更新imageView和pageControl
+ 更新imageView
  */
-- (void)layoutImageViewsAndPageControl{
+- (void)layoutImageViews{
     
     NSInteger dalta = 0;
     if (self.scrollView.contentOffset.x > kWidth){//左滑
@@ -280,7 +354,7 @@ typedef void(^clickFeedBack)(NSUInteger index);
         [imageView setImage:_images[index]];
     }
     
-    self.scrollView.contentOffset = CGPointMake(kWidth, 0);
+    self.scrollView.contentOffset = CGPointMake(kWidth, 0); 
     
 }
 

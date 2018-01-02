@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, BBBannerViewPageControlPosition) {
-    BBBannerViewPageControlPositionBottomCenter = 1 << 0,
-    BBBannerViewPageControlPositionBottomRight  = 1 << 1,
+    BBBannerViewPageControlPositionBottomCenter =   1 << 0,
+    BBBannerViewPageControlPositionBottomRight  =   1 << 1,
 };
 
 @interface BBBannerView : UIView
@@ -39,6 +39,9 @@ typedef NS_ENUM(NSUInteger, BBBannerViewPageControlPosition) {
 /**设置轮播时间间隔,默认为2s*/
 @property (nonatomic, assign) CGFloat                           intervalTime;
 
+/**设置是否允许无限轮播,默认为YES,
+ 但设置需要自动轮播为YES时，此属性设置将失效。*/
+@property (nonatomic, assign) BOOL                              isAllowUnlimitedCarousel;
 
 /**
  轮播器初始化动态方法

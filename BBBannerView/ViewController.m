@@ -103,8 +103,9 @@
     bannerView.pageTintColor = [UIColor cyanColor];
     bannerView.currentPageTintColor = [UIColor purpleColor];
     bannerView.offsetRight = 60;
-//    bannerView.intervalTime = 3;
-    bannerView.isNeedAutoCarousel = YES;
+    bannerView.intervalTime = 1;
+    bannerView.isNeedAutoCarousel = NO;
+    bannerView.isAllowUnlimitedCarousel = NO;
     
     [self.view addSubview:bannerView];
     
